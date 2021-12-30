@@ -1,0 +1,62 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+/* css reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* page styling */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background: #111;
+  color: #fff;
+}
+header,
+main {
+  height: 100vh;
+}
+header {
+  float: left;
+  width: 25%;
+}
+  header nav {
+    height: 100vh;
+    background: #000;
+    padding-top: 120px;
+    padding-left: 60px;
+  }
+    header nav a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+      color: #ccc;
+    }
+    header nav a:hover {
+      color: #fff;
+    }
+main {
+  float: left;
+  width: 75%;
+}
