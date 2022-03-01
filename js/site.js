@@ -1,20 +1,29 @@
 function Home() {
-  return '<div>Beranda</div>';
+  return `<div id="homePage" class="container">
+    <div class="row">
+      <div class="col-6">
+        <img src="https://dummyimage.com/250x250/dddddd/222222.jpg" alt="Profile Picture" class="center">
+      </div>
+      <div class="col-6">
+        <h1 class="font-bold">Ade Syahlan Prayoga</h1>
+        <p class="font-light">Software Engineer</p>
+        <div>
+          <a href="#">linkedin</a>
+          <a href="#">facebook</a>
+          <a href="#">twitter</a>
+          <a href="#">github</a>
+        </div>
+      </div>
+    </div>
+  </div>`;
 }
 
 function About() {
   return '<div>Tentang</div>';
-
-}
-
-function Blog() {
-  return '<div>Tulisan</div>';
-
 }
 
 function Portfolios() {
   return '<div>Portofolio</div>';
-
 }
 
 function Contact() {
@@ -25,8 +34,8 @@ function Contact() {
 const routes = {
   '/'           : {title: 'Ade Syahlan Prayoga', render: Home},
   '/about'      : {title: 'Tentang Saya', render: About},
-  '/blog'       : {title: 'Tulisan', render: Blog},
   '/portfolios' : {title: 'Portofolio', render: Portfolios},
+  '/blog'       : {title: 'Tulisan', externalLink: 'https://blog.alanpryoga.com'},
   '/contact'    : {title: 'Kontak', render: Contact},
 };
 
@@ -37,7 +46,12 @@ function dispatch(defaultRoute) {
 
   if (view) {
     document.title = view.title;
-    app.innerHTML  = view.render();
+
+    if (view.render != undefined) {
+      app.innerHTML = view.render();
+    } else {
+      window.open(view.externalLink, '_blank');
+    }
   } else {
     dispatch('/404');
   }
