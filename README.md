@@ -1,7 +1,12 @@
 # Blog Theme
-A personal blog theme with a SPA (Single Page Application) approach built with HTML, CSS, and Vanilla JS.
+A SPA (Single Page Application) approach for personal blog theme built with HTML, CSS, and Vanilla JS.
 
 ## Table of Contents
+- [Motivation](#motivation)
+- [Getting Started](#getting-started)
+- [Roadmap](#roadmap)
+- [License](#license)
+- [Contact](#contact)
 
 ## Motivation
 
@@ -12,3 +17,4 @@ A personal blog theme with a SPA (Single Page Application) approach built with H
 ## License
 
 ## Contact
+- Ade Syahlan Prayoga - [imalanpryoga@gmail.com](mailto:imalanpryoga@gmail.com)
